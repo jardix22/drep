@@ -1,0 +1,1 @@
+se ha agregado la carpeta core donde ya incorpora el jquery

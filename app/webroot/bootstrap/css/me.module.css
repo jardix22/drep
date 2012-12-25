@@ -1,0 +1,73 @@
+/*-----------------------------------------*/
+/*  Bootstrap WhiteForm Module Css  v 1.0  */
+/*-----------------------------------------*/
+
+/* Form Module*/
+.form{
+	width: 100%;
+}
+
+.form-row{
+	padding: 20px;
+	border-bottom: 1px dashed #ccc;
+}
+.form fieldset .form-row:nth-of-type(1){
+	padding-top: 0;
+}
+
+.form fieldset .form-row:nth-last-of-type(1){
+	padding-bottom: 0;
+	border-width: 0;
+}
+
+.form-row label{
+	float: left;
+	width: 200px;
+	padding: 5px 0;
+	margin: 0;
+}
+
+
+.form-row label{
+	float: left;
+	width: 200px;
+	padding: 5px 0;
+	margin: 0;
+}
+
+.form legend {
+	margin-top: 5px;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+.form-item{
+	margin-left: 220px;
+	margin-bottom: 0px ;
+}
+
+.form-item input, .form-item select{
+	margin: 0;
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+}
+@media (max-width: 767px) {
+}
+@media (min-width: 1200px) {
+}
+@media (min-width: 768px) and (max-width: 979px) {
+}
+@media (max-width: 767px) {
+}
+@media (max-width: 480px) {
+	.form-item{
+		clear: both;
+		float: none;
+		margin: 0;
+	}
+}
+@media (max-width: 979px) {
+}
+@media (min-width: 980px) {
+}
