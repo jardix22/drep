@@ -1,5 +1,5 @@
 <?php echo $this->Form->create(null, array('class'=>'form-signin')); ?>
-	<h2 class="form-signin-heading">Inicar Sesión</h2>
+	<h4 class="form-signin-heading">Inicar Sesión</h4>
 
 	<div id='login-input-wrapper'>
 		<div class='login-input'>
