@@ -15,7 +15,7 @@
 	</label>
 -->
 	<div id='login-button'>
-		<?php echo $this->Form->submit('Iniciar Sesión', array('class'=>'btn btn-large btn-primary')); ?>
+		<?php echo $this->Form->submit('Iniciar Sesión', array('class'=>'btn btn-primary')); ?>
 	</div>
 	
 <?php echo $this->Form->end(); ?>

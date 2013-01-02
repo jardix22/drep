@@ -39,18 +39,19 @@
 					<a class="brand" href="#">DREP</a>
 					<div class="nav-collapse collapse navbar-inverse-collapse">
 						<ul class="nav">
-							<!--<li>
-								<a href=<?php //echo $this->Html->url('/');?>>Inicio</a>
-							</li>-->
+							<li>
+								<a href=<?php echo $this->Html->url('/');?>>Inicio</a>
+							</li>
 
-							<li><?php echo $this->Html->link("Inicial", array('controller' => 'home','action' => 'institution', 1 ))?></li>
-							<li><?php echo $this->Html->link("Primaria", array('controller' => 'home','action' => 'institution', 2 ))?></li>
-							<li><?php echo $this->Html->link("Secundaria", array('controller' => 'home','action' => 'institution', 3 ))?></li>
-							<li><?php echo $this->Html->link("Directores", array('controller' => 'home','action' => 'institution', 4 ))?></li>
 
 							<?php if ($current_user['role'] == 'A'): ?>
 								<li><a href=<? echo $this->Html->url(array('controller' => 'tests', 'action' => 'index'))?>>Tests</a></li>
 								<li><a href=<? echo $this->Html->url(array('controller' => 'specialists', 'action' => 'index')); ?>>Especialistas</a></li>
+							<?php else: ;?>
+								<li><?php echo $this->Html->link("Inicial", array('controller' => 'home','action' => 'institution', 1 ))?></li>
+								<li><?php echo $this->Html->link("Primaria", array('controller' => 'home','action' => 'institution', 2 ))?></li>
+								<li><?php echo $this->Html->link("Secundaria", array('controller' => 'home','action' => 'institution', 3 ))?></li>
+								<li><?php echo $this->Html->link("Directores", array('controller' => 'home','action' => 'institution', 4 ))?></li>
 							<?php endif;?>
 							<!--<li class="divider-vertical"></li>-->
 						</ul>
@@ -80,7 +81,7 @@
 		<div class="crumb-content">
 			<div class="container">
 				<div class="breadcrumb cake-breadcrumb">
-					<?php echo $this->Html->getCrumbs("<span class='divider'>/</span>",''); ?>
+					<?php echo $this->Html->getCrumbs("<span class='divider'>/</span>",'DREP', null); ?>
 				</div>
 				<!--
 				<ul class="breadcrumb">
