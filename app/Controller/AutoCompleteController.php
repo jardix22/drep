@@ -5,8 +5,8 @@
 
 		public function person()
 		{
-			$this->loadModel('Person');
 
+			$this->loadModel('Person');
 			$this->viewClass = 'Json';
 			$this->RequestHandler->setContent('json', 'application/json');
 

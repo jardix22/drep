@@ -1,0 +1,740 @@
+body { 
+    background-color: #ffffff;
+    font-family:Arial;
+    font-size: 12px;
+    font-style: normal;
+    color : #666666;
+    margin-left: 0px;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    background-attachment: fixed;
+}
+
+h1, h2, h3 {
+    padding: 0;
+    margin: 0;
+    color: #000000;
+}
+
+strong {
+    color:#A70F1A;
+    font-weight:bolder;
+}
+
+p, ul, ol {
+    margin-bottom: 1.5em;
+}
+
+ul {
+    margin: 0px;
+    padding: 0;
+}
+
+a {
+    color: #000000;
+}
+
+a:hover {
+    text-decoration:underline;
+    color:#A70F1A;
+}
+
+/** Style for header starts here */
+
+#header {
+    width: 800px;
+    height: 65px;
+    margin: 0px auto;
+}
+
+#header h1, #header h2 {
+    margin: 0px;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #999999;
+}
+
+#header h1 {
+    float: left;
+    padding: 70px 10px 10px 20px;
+    font-size: 3em;
+}
+
+#header h2 {
+    padding: 73px 10px 0px 0px;
+    font-size: 1.4em;
+}
+
+/** Style for menu starts here */
+
+#menu {
+    width: 800px;
+    height: 30px;
+    margin: 0px auto;
+    background:url(../img/logos/redalyc_barra.png) no-repeat center;
+
+}
+
+#menu ul {
+    margin: 0px;
+    padding: 0 0 0 10px;
+    list-style: none;
+}
+
+#menu li {
+    display: inline;
+	font-family:Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-style: normal;
+}
+
+#menu a {
+    display: block;
+    float: left;
+    border: none;
+    padding: 5px 20px 5px 20px;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+#menu a:hover {
+    color: #FFFFFF;
+    text-decoration:underline;
+}
+
+/** Style for wrapper starts here */
+
+#wrapper {
+    /*width: 840px;
+    margin: 0px auto;
+    padding: 0px 0;*/
+    position: absolute; left:50%; width:840px; margin-left: -420px;
+    position: absolute;
+    left:50%;
+    width:840px;
+    margin-left: -420px;
+}
+
+/** Style for content starts here */
+
+#content {
+    width: 800px;
+    margin: 0px auto;
+}
+
+#content h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    border-bottom: 1px #CCCCCC dashed;
+}
+
+#content p {
+}
+
+#content a {
+    text-decoration: none;
+}
+
+#right {
+    float: right;
+    width: 615px;
+    padding: 0px 10px 0px 0px;
+}
+
+
+#central{
+    float:left;
+    width: 780px;
+    padding: 0px 10px 0px 10px;
+}
+
+#right ul {
+    margin: 0 3em;
+    padding: 0;
+    list-style: none;
+}
+
+#right li {
+    margin-bottom: 8px;
+    padding-left: 10px;
+    background: url(../../images/img06.jpg) no-repeat 0 7px;
+    line-height: 17px;
+}
+
+#right .post {
+}
+
+
+
+#left {
+    float: left;
+    width: 140px;
+    padding: 10px 10px 0px;
+}
+
+#left .post {
+}
+
+#abecedario
+{
+    margin-top: 10px;
+    background-color: #FFFFFF;
+}
+
+#listaDeAreaNaturales{
+    float: left;
+    width: 350px;
+    padding: 0px 10px;
+}
+#listaDeAreaSociales{
+    float: right;
+    width: 350px;
+    padding: 0px 10px;
+
+}
+
+
+#logoRevista
+{
+    margin-top: 10px;
+    float: left;
+    width: 178px;
+}
+
+#tablaDeDatos
+{
+    float:left;
+    margin: 5px 15px auto 15px;
+    padding:0px 10px 0px 10px;
+    width: 350px;
+    height:auto;
+}
+
+#logoInstitucion
+{
+    float:right;
+    margin: 5px auto;
+    width: 178px;
+}
+
+#Caracteristicas
+{
+    text-align:left;
+    float: left;
+    margin-left: 0px;
+    width: 240px;
+    padding:10px 5px 10px 5px;
+}
+
+#Indizaciones
+{  
+    float: left;
+    width: 240px;
+    padding:10px 5px 10px 5px;
+    margin-left:15px
+}
+
+#Directorio
+{
+
+    float:right;
+    padding: 10px 5px 10px 5px;
+    width: 240px;
+}
+
+
+#tablaNumeros
+{
+    margin-top: 50px;
+    float: left;
+    width: 550px;
+}
+
+#menuArticulos
+{
+    margin-top: 50px;
+    float:right;
+    margin-left: 10px;
+    width: 200px;
+    background-color:white;
+}
+
+#sitiosRelacionados
+{
+    margin-top: 10px;
+    float: left;
+    width: 300px;
+    clear: both;
+}
+
+#creativeCommons
+{
+    margin-top: 10px;
+    float: left;
+    margin-left: 3%;
+    width: 100px;
+}
+
+#logosExtras
+{
+    margin-top: 10px;
+    float: left;
+    margin-left: 10px;
+    width: 129px;
+}
+
+#tabla{
+    float: left;
+}
+
+
+#prueba
+{
+    /*margin-top: 10px;*/
+    float: left;
+    margin-left: 5%;
+    width: 768px;
+}
+
+#tablaDeDatos2
+{
+    margin-top: 5px;
+    float: left;
+    margin-left: 3%;
+    width: 310px;
+}
+
+/*Revistas nuevas*/
+#menuFecha{
+    text-align: left;
+}
+
+
+#nuevasTitulo{
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+#cienciasSocialesNuevas{
+    float: left;
+    width: 350px;
+    margin-left: 5px;
+    margin-top: 10px;
+
+}
+
+#cienciasNaturalesNuevas{
+    float: right;
+    margin-left: 20px;
+    width: 350px;
+    margin-top: 10px;
+
+}
+
+#actualizacionTitulo{
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 30px;
+}
+
+
+#cienciasSocialesActualizaciones{
+    float: left;
+    width: 350px;
+    margin-left: 5px;
+    margin-top: 10px;
+
+}
+
+#cienciasNaturalesActualizaciones{
+    float: right;
+    margin-left: 20px;
+    margin-top: 10px;
+    width: 350px;
+
+}
+/*--------------*/
+
+.clearboth { 
+    clear: both;
+}
+
+.spacer
+{
+    float: left;
+    width: 3%;
+}
+
+.stilo{
+    position:absolute;
+    left: 505px; top: 130px;
+    width: 400px;
+    height: 70px;
+    display:none;
+}
+
+.tblPub, .tblPub td, .tblPub tr {
+    background-color:#FFFFFF;
+    border:1px solid #666666;
+    height:65px;
+    text-align:justify;
+}
+
+/** Style for footer starts here */
+
+#footer {
+    clear: both;
+    width: 800px;
+    height: 40px;
+    margin: 0px auto;
+    font-size: 12px;
+    color: #FFFFFF;
+    /*background:url(../../../inc/img/redalyc_pie2.png) no-repeat center;*/
+    
+}
+
+#footer .copyright {
+    float: left;
+    margin: 0px;
+    padding-left: 20px;
+    text-align: center;
+}
+
+#footer .links {
+    float: right;
+    margin: 0px;
+    padding-right: 20px;
+    text-align: center;
+}
+
+#footer a {
+    text-decoration: none;
+    color: #E5E5CC;
+}
+
+/** Style for content starts here */
+
+#img{
+    width:200px;
+    height:55px;
+    margin-top: 10px;
+    float: left;
+    caption-side:top;
+    vertical-align:top;
+    /*background:url(../images/redalyc_logo.jpg) no-repeat;*/
+}
+.logo{
+
+}
+
+#encabezado{
+    font-family:Arial;
+    width: 550px;
+    float:right;
+    text-align:right;
+    vertical-align:top;
+    margin-top: 10px;
+    margin-right:10px;
+    caption-side:top;
+}
+
+#enviarEmail {
+    float:right;
+    margin: 0px 0px 10px 0px;
+}
+
+#ligaPDF{
+    float:right;
+    margin: 0px 0px 10px 0px;
+}
+
+#imprimir{
+    float:right;
+    margin: 0px 0px 10px 0px;
+}  
+
+.Titulo { 
+    font-family:Verdana;
+    font-size: 13px;
+    font-weight:bold;
+    font-style: normal;
+    color:#A70F1A;
+}
+.Titulo2 { 
+    font-family:Verdana;
+    font-size: 12px;
+    font-weight:bold;
+    font-style: normal;
+    color:#A70F1A;
+}
+
+.TituloN { 
+    font-family:Arial;
+    font-size: 24px;
+    font-weight:bold;
+    font-style: normal;
+    color:#666666;
+}
+.Titulo2N{ 
+    font-family:Arial;
+    font-size: 15px;
+    font-weight:bold;
+    font-style: normal;
+    color:#A70F1A;
+}
+
+.Titulo3 { 
+    font-family:Verdana;
+    font-size: 10px;
+    font-weight:bold;
+    font-style: normal;
+    color:#C6C6C6;
+}
+
+.TitGris { 
+    font-family: Arial;
+    font-size: 12px;
+    font-weight:bold;
+    font-style: normal;
+    color:#666666;
+}
+
+.TextPie {
+    font-family: Arial;
+    font-size: 11px;
+    font-weight:normal;
+    font-style: normal;
+    color:#ffffff;
+}
+
+.TextRed {
+    font-family: Arial;
+    font-size: 12px;
+    font-weight:bold;
+    font-style: normal;
+    color:#A70F1A;
+}
+
+.TextGris {
+    font-family: Arial;
+    font-size: 10px;
+    font-weight:normal;
+    font-style: normal;
+    color:rgb(153, 153, 153);
+}
+
+.TextoGris {
+    font-family:Verdana;
+    font-size:12px;
+    color:rgb(153, 153, 153);
+}
+
+.TextoGrisCursiva {
+    font-family:Verdana;
+    font-size:14px;
+    font-style:normal;
+    font-weight:normal;
+    color:rgb(153, 153, 153);
+}
+
+
+.TextoGrisCursivaBold{
+    font-family:Verdana;
+    font-size:14px;
+    font-weight:bold;
+    color:rgb(153, 153, 153);
+}
+
+.TextoGris11{
+    color:#666666;
+    font-family:Verdana;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.TextoGris14{
+    color:#666666;
+    font-family:Verdana;
+    font-size: 14px;
+    font-weight:bold;
+}
+
+.TextoGris12{
+    color:#666666;
+    font-family:Verdana;
+    font-size: 12px;
+    font-weight:bold;
+}
+
+table {
+    font-family: Arial;
+    font-size: 12px;
+    font-style: normal;
+    padding: 0px;
+    border: none;
+}
+
+.caja {
+    font-family: Arial;
+    font-size: 12px;
+    font-style: normal;
+    line-height: normal;
+    font-weight: normal;
+    font-variant: normal;
+    letter-spacing: normal;
+    word-spacing: normal;
+    border-bottom-width:1px;
+    border-left-width:1px;
+    border-right-width:1px;
+    border-top-width:1px;
+    border-color:#689B99;
+}
+
+.boton {
+    height:25px;
+    background-color: #ffffff;
+    font-family: Arial;
+    font-size: 11px;
+    font-style: normal;
+    line-height: normal;
+
+    color:#000000;
+    border-bottom-width:1px;
+    border-left-width:1px;
+    border-right-width:1px;
+    border-top-width:1px;
+    border-color:#ffffff;
+}
+
+.td_trans_text{
+    text-transform:capitalize;
+}
+
+.combo {
+    font-family: Arial;
+    font-size: 12px;
+    font-style: normal;
+    line-height: normal;
+    font-weight: normal;
+    font-variant: normal;
+    letter-spacing: normal;
+    word-spacing: normal;
+    height: auto;
+    width: auto;
+}
+
+.table_principal{ 
+    width:768px;
+    border:0;
+    border-spacing:0;
+}
+
+.TblResBus{
+    width:768px;
+    border:1px;
+    border-color:#0000FF;
+    border-spacing:0;
+}
+
+td_Tit{ 
+    font-size: 16px;
+    font-family:Arial;
+    font-weight: bold;
+    color: #FFFFFF;
+    background-color:#b10c07;
+    height:25px;
+}
+
+.td_titulo{
+    background-color:#b10c07;    /*renglon con fondo rojo  */
+    font-family:Arial;
+    font-weight:bold;
+    font-size:12px;
+    height:20px;
+    color: #FFFFFF;
+}
+
+.td_gris{ 
+    background-color:#CCCCCC;    /*tabla con fondo gris claro  */
+    color: #000000;
+    font-family:Arial;
+    font-size:12px;
+    font-weight:bold;
+    height:25px;
+}
+
+.td_pleca { 
+    background-color:#b10c07;
+    height:2px;
+}
+
+.td_rest { 
+    font-size: 12px;   /*STYLE QUE SE UTILIZA PARA LOS RESULTADOS DE LAS BUSQUEDAS*/
+    font-family:Arial;
+    font-weight: bold;
+    color: #000000;
+    background-color:#999999;
+    height:20px; text-align:center;
+}
+
+.td_homRevRed {
+    font-size: 12px;
+    font-family:Arial;
+    color: #ffffff;
+    background-color:#95a1a7;
+    height:20px;
+}
+
+.td_homRevRed2 {
+    background-color:#ffffff;
+}
+
+.td_upper { 
+    color:#000000;
+    font-weight:bold;
+    text-transform:uppercase;
+}
+
+.td_textn {
+    color:#000000;
+}
+
+.TxtArtPdf { font-family: Arial; 
+    font-size: 9px;
+    font-weight:bold;
+    font-style: normal;
+    color:#A70F1A;
+
+}
+
+.td_busq {
+    font-weight: bold;
+    height:50px;
+    vertical-align:middle;
+    margin-left:10px;
+    text-align:center;
+}
+
+.resultados {
+    color: #000000;
+}
+
+A.linkmenu:visited, A.linkmenu:active, A.linkmenu:link {
+    font-family:Arial;
+    font-size:12px;
+    color:#b10c07;
+}
+A.linkmenu:hover {
+    font-family:Arial;
+    font-size:12px;
+    color:#b10c07;
+    text-decoration:underline;
+}
+
+
+img { border: none; }
+

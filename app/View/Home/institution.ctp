@@ -29,7 +29,10 @@
 				<td><?php echo $institution['Institution']['code']; ?></td>
 				<td><?php echo $institution['Institution']['id']; ?></td>
 				<td><?php echo $institution['Institution']['name']; ?></td>
+				<!--
 				<td><?php echo $this->Html->link('ver', array('controller' => 'workers', 'action' => 'index', '?' => array('type' => $levelId, 'institution' => $institution['Institution']['id']))); ?></td>
+			-->
+				<td><?php echo $this->Html->link('Evaluar Director', array('controller' => 'directors', 'action' => 'evaluation', '?' => array('type' => $levelId, 'institution' => $institution['Institution']['id']))); ?></td>
 			</tr>
 		<?php endforeach;?>
 	</tbody>

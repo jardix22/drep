@@ -20,7 +20,7 @@
 	</div>
 
 	<h5>Datos del Docente: </h5>
-	<?php echo $this->BtForm->input('Person.document', 'DNI'); ?>
+	<?php echo $this->BtForm->input('Person.document', 'DNI', array('autocomplete' => 'off')); ?>
 	<?php echo $this->BtForm->input('Person.names', 'Nombres y Apellidos', array('class' => 'span7')); ?>
 
 	<hr>
@@ -98,6 +98,28 @@
 <script type="text/javascript">
 	$(document).ready(function () {
 
+		$.validator.addMethod("uniqueUserName", function(value, element) {
+			var isSuccess = false;
+
+			$.ajax({
+				type: "POST",
+				url: "/drep/validates/checkUser",
+				data: { 'term': value},
+				async: false,
+				dataType: 'json',
+				success: function(data)
+				{
+				 	isSuccess = data.isUnique;
+				}
+			});
+			if (!isSuccess) {
+				$(element).closest('.control-group').removeClass('success');
+				$(element).closest('.control-group').addClass('error');
+			}
+			return isSuccess;
+
+		}, "El numero de DNI fue registrado.");
+
 		$('#evaluation-submit').on('click', function (e) {
 
 			$("#EvaluationSaveForm").validate({
@@ -105,7 +127,8 @@
 					"data[Person][document]": {
 						required: true,
 						digits: true,
-						minlength: 8
+						minlength: 8,
+						uniqueUserName: true
 					},
 					"data[Person][names]": {
 						required: true
@@ -120,10 +143,6 @@
 						.closest('.control-group').addClass('success');
 				}
 			});
-
-			//e.preventDefault();
-			//alert(":P");
-			//$(this).submit();
 		});
 	});
 </script>

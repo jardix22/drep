@@ -51,12 +51,6 @@
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <!-- Fav and touch icons -->
-    <link rel="shortcut icon" href="../assets/ico/favicon.ico">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
   </head>
 
   <body>
@@ -67,23 +61,5 @@
 
     <?php echo $this->element('sql_dump'); ?>
       
-    <!-- Le javascript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-
-    <?php echo $this->Html->script('/bootstrap/js/jquery'); ?>
-    <?php echo $this->Html->script('/bootstrap/js/bootstrap-transition'); ?>
-    <?php echo $this->Html->script('/bootstrap/js/bootstrap-alert'); ?>
-    <?php echo $this->Html->script('/bootstrap/js/bootstrap-modal'); ?>
-    <?php echo $this->Html->script('/bootstrap/js/bootstrap-dropdown'); ?>
-    <?php echo $this->Html->script('/bootstrap/js/bootstrap-scrollspy'); ?>
-    <?php echo $this->Html->script('/bootstrap/js/bootstrap-tab'); ?>
-    <?php echo $this->Html->script('/bootstrap/js/bootstrap-tooltip'); ?>
-    <?php echo $this->Html->script('/bootstrap/js/bootstrap-popover'); ?>
-    <?php echo $this->Html->script('/bootstrap/js/bootstrap-button'); ?>
-    <?php echo $this->Html->script('/bootstrap/js/bootstrap-collapse'); ?>
-    <?php echo $this->Html->script('/bootstrap/js/bootstrap-carousel'); ?>
-    <?php echo $this->Html->script('/bootstrap/js/bootstrap-typeahead'); ?>
-
   </body>
 </html>

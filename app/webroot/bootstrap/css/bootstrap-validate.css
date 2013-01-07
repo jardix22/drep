@@ -8,7 +8,9 @@ label.valid {
 	text-indent: -9999px;
 }
 label.error {
-	/*font-weight: bold;*/
+	/*
+	font-weight: bold;
+	*/
 	color: red;
 	padding: 2px 8px;
 	margin-top: 2px;

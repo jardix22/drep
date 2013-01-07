@@ -8,23 +8,17 @@
 		<meta name="author" content="">
 		<!-- Le styles -->
 
-		<?php echo $this->Html->css('/bootstrap/css/bootstrap'); ?>
-		<?php echo $this->Html->css('/bootstrap/css/bootstrap-responsive'); ?>
+		<?php echo $this->Html->css('/bootstrap/css/bootstrap.min'); ?>
+		<?php echo $this->Html->css('/bootstrap/css/bootstrap-responsive.min'); ?>
 		<?php echo $this->Html->css('/bootstrap/css/bootstrap-validate'); ?>
 
 		<?php echo $this->Html->css('/myDrepTheme/css/master'); ?>
 		<?php echo $this->Html->css('/bootstrap/css/core/jquery.dataTables'); ?>
 
-
-
-	<?php echo $this->Html->script('/bootstrap/js/jquery'); ?>
-	<?php echo $this->Html->script('/bootstrap/js/core/jquery-ui.min'); ?>
-	<?php echo $this->Html->script("/bootstrap/js/core/jquery.validate.min"); ?>
-	<?php echo $this->Html->script('/bootstrap/js/es/validate'); ?>
-
-
-
-
+		<?php echo $this->Html->script('/bootstrap/js/core/jquery-1.8.3.min'); ?>
+		<?php echo $this->Html->script('/bootstrap/js/core/jquery-ui.min'); ?>
+		<?php echo $this->Html->script("/bootstrap/js/core/jquery.validate.min"); ?>
+		<?php echo $this->Html->script('/bootstrap/js/es/validate'); ?>
 	</head>
 	<body>
 		<header class="main-header">
@@ -39,19 +33,16 @@
 					<a class="brand" href="#">DREP</a>
 					<div class="nav-collapse collapse navbar-inverse-collapse">
 						<ul class="nav">
-							<li>
-								<a href=<?php echo $this->Html->url('/');?>>Inicio</a>
-							</li>
-
 
 							<?php if ($current_user['role'] == 'A'): ?>
+								<li><a href=<?php echo $this->Html->url('/');?>>Inicio</a></li>
 								<li><a href=<? echo $this->Html->url(array('controller' => 'tests', 'action' => 'index'))?>>Tests</a></li>
 								<li><a href=<? echo $this->Html->url(array('controller' => 'specialists', 'action' => 'index')); ?>>Especialistas</a></li>
 							<?php else: ;?>
 								<li><?php echo $this->Html->link("Inicial", array('controller' => 'home','action' => 'institution', 1 ))?></li>
 								<li><?php echo $this->Html->link("Primaria", array('controller' => 'home','action' => 'institution', 2 ))?></li>
 								<li><?php echo $this->Html->link("Secundaria", array('controller' => 'home','action' => 'institution', 3 ))?></li>
-								<li><?php echo $this->Html->link("Directores", array('controller' => 'home','action' => 'institution', 4 ))?></li>
+								<!--<li><?php //echo $this->Html->link("Directores", array('controller' => 'home','action' => 'institution', 4 ))?></li>-->
 							<?php endif;?>
 							<!--<li class="divider-vertical"></li>-->
 						</ul>
@@ -81,7 +72,7 @@
 		<div class="crumb-content">
 			<div class="container">
 				<div class="breadcrumb cake-breadcrumb">
-					<?php echo $this->Html->getCrumbs("<span class='divider'>/</span>",'DREP', null); ?>
+					<?php echo $this->Html->getCrumbs("<span class='divider'>/</span>",null, null); ?>
 				</div>
 				<!--
 				<ul class="breadcrumb">
@@ -120,7 +111,7 @@
 
 		<?php echo $this->Html->script('/bootstrap/js/bootstrap-transition'); ?>
 		<?php echo $this->Html->script('/bootstrap/js/bootstrap-alert'); ?>
-		<?php echo $this->Html->script('/bootstrap/js/bootstrap-modal'); ?>
+		<?php //echo $this->Html->script('/bootstrap/js/bootstrap-modal'); ?>
 		<?php echo $this->Html->script('/bootstrap/js/bootstrap-dropdown'); ?>
 		<?php echo $this->Html->script('/bootstrap/js/bootstrap-scrollspy'); ?>
 		<?php echo $this->Html->script('/bootstrap/js/bootstrap-tab'); ?>
@@ -128,7 +119,7 @@
 		<?php echo $this->Html->script('/bootstrap/js/bootstrap-popover'); ?>
 		<?php echo $this->Html->script('/bootstrap/js/bootstrap-button'); ?>
 		<?php echo $this->Html->script('/bootstrap/js/bootstrap-collapse'); ?>
-		<?php echo $this->Html->script('/bootstrap/js/bootstrap-carousel'); ?>
+		<?php // echo $this->Html->script('/bootstrap/js/bootstrap-carousel'); ?>
 		<?php echo $this->Html->script('/bootstrap/js/bootstrap-typeahead'); ?>
 
 	</body>

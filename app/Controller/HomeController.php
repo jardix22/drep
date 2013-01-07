@@ -11,7 +11,6 @@ class HomeController extends AppController
 
 	public function institution($levelId=null)
 	{
-
 		$this->loadModel('Institution');
 
 		$user = $this->Auth->User();

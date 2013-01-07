@@ -47,14 +47,23 @@ class EvaluationsController extends AppController
 				if($this->Evaluation->save($data['Evaluation'])){
 					
 					$this->Session->setFlash("Exitos ". $this->Person->names . " ha obtenido: " . $total . "puntos.");			
+					
+					// redirecciona a la institucion y lista docentes
+					
+
+
+					// redirecciona a la institucion y lista docentes
+					
 					$this->redirect(array(
 						'controller' => 'workers',
 						'action' => 'index',
 						'?' => array(
-							'type' => $institution['Institution']['level_id'],
-							'institution' => $institution['Institution']['id']
+							'type' => $institution['Institution']['level_id'], // Nivel de la institución
+							'institution' => $institution['Institution']['id'] // Id de la inslitución
 						)
 					));
+
+
 
 				}else{
 					$this->Session->setFlash("Error al Guarda Datos de Evaluacion");

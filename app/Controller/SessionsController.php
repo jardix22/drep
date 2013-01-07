@@ -33,13 +33,16 @@
 				$this->loadModel('Person');
 
 				$specialist = $this->Specialist->find('first', array('conditions' => array('user_id' => $user['id']), 'recursive' => -1));
-				$person = $this->Person->find('first', array('conditions' => array('id' => $specialist['Specialist']['user_id']), 'recursive' => -1));
+				$person = $this->Person->find('first', array('conditions' => array('id' => $specialist['Specialist']['person_id']), 'recursive' => -1));
 				
 				$specialist_person = array('Specialist' => $specialist['Specialist'], 'Person' => $person['Person']);
 				$this->Session->write('currentSpecialist', $specialist_person);
+				
+				$this->redirect(array('controller'=>'home', 'action' => 'institution', 1));
 			}else{
 				$this->Session->write('currentSpecialist', '');
 			}   
+			
 			$this->redirect($this->Auth->redirect());
 		}
 	}

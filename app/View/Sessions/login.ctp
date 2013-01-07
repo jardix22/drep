@@ -3,7 +3,7 @@
 
 	<div id='login-input-wrapper'>
 		<div class='login-input'>
-			<?php echo $this->Form->input('username', array('id'=>'da-login-username', 'placeholder'=>'Usuario', 'label'=> false, 'div' => false, 'class' => 'input-block-level' )); ?>
+			<?php echo $this->Form->input('username', array('id'=>'da-login-username', 'placeholder'=>'Usuario', 'label'=> false, 'div' => false, 'class' => 'input-block-level', 'autocomplete' => 'off' )); ?>
 		</div>
 		<div class='login-input'>
 			<?php echo $this->Form->input('password', array('id'=>'da-login-password', 'placeholder'=>'Contraseña', 'label'=> false, 'div' => false, 'class' => 'input-block-level')); ?>

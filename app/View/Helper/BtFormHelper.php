@@ -23,7 +23,11 @@
             $options['label'] = false;
         	$options['div'] = false;
             $options['required'] = 'required';
-            $options['class'] = 'input-xlarge';
+
+            if (!isset($options['class'])) {
+                $options['class'] = 'input-xlarge';
+            }
+
 
             if (empty($label)) {
             	$h_label = '';

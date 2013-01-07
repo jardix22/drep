@@ -17,8 +17,11 @@
 
 		public function add()
 		{
+			$this->loadModel('Code');
 			$this->loadModel('Ugel');
+
 			$this->set('ugels', $this->Ugel->find('list'));
+			$this->set('codes', $this->Code->find('list', array('fields' => array('id', 'description'))));
 		}
 
 		public function save()
