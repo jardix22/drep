@@ -4,21 +4,18 @@
 	$p = array(1 => 'PRIMERA', 2 => 'SEGUNDA', 3 => 'TERCERA', 4 => 'CUARTA');
 	$r = array(1 => 'I', 2 => 'II', 3 => 'III', 4 => 'IV', 5 => 'V',  6 => 'VI', 7 => 'VII');
 ?>
-	
-<?php $this->Html->addCrumb($institution['Institution']['name'], "/workers/index/"); ?>
+
+<?php $this->Html->addCrumb( $subTitle[$institution['Institution']['level_id']], '/home/institution/'.$institution['Institution']['level_id']); ?>
+<?php $this->Html->addCrumb($institution['Institution']['name'],null); ?>
+<?php $this->Html->addCrumb("DIRECTOR", "/directors/detail/". $institution['Institution']['id']); ?>
 <?php $this->Html->addCrumb("EVALUACIÓN", null); ?>
 
-<?php echo $this->Form->create(array('action' => 'save', 'class' => 'form-horizontal')); ?>
+
+<?php echo $this->Form->create(array('action' => 'saveDirector', 'class' => 'form-horizontal')); ?>
 
 	<div class="page-header">
 		<h3><?php echo $test['Test']['title']?></h3>
 	</div>
-
-	<h5>Datos del Docente: </h5>
-	<?php echo $this->BtForm->input('Person.document', 'DNI', array('autocomplete' => 'off')); ?>
-	<?php echo $this->BtForm->input('Person.names', 'Nombres y Apellidos', array('class' => 'span7')); ?>
-
-	<hr>
 
 	<div class="valuation-block">
 		<p>
@@ -89,55 +86,3 @@
 		font-weight: bold;
 	}
 </style>
-
-<script type="text/javascript">
-	$(document).ready(function () {
-
-		$.validator.addMethod("uniqueUserName", function(value, element) {
-			var isSuccess = false;
-
-			$.ajax({
-				type: "POST",
-				url: "/drep/validates/checkUser",
-				data: { 'term': value},
-				async: false,
-				dataType: 'json',
-				success: function(data)
-				{
-				 	isSuccess = data.isUnique;
-				}
-			});
-			if (!isSuccess) {
-				$(element).closest('.control-group').removeClass('success');
-				$(element).closest('.control-group').addClass('error');
-			}
-			return isSuccess;
-
-		}, "El numero de DNI fue registrado.");
-
-		$('#evaluation-submit').on('click', function (e) {
-
-			$("#EvaluationSaveForm").validate({
-				rules:{
-					"data[Person][document]": {
-						required: true,
-						digits: true,
-						minlength: 8,
-						uniqueUserName: true
-					},
-					"data[Person][names]": {
-						required: true
-					}	
-				},
-				highlight: function(label) {
-					$(label).closest('.control-group').addClass('error');
-				},
-				success: function(label) {
-					label
-						.text('OK!').addClass('valid')
-						.closest('.control-group').addClass('success');
-				}
-			});
-		});
-	});
-</script>

@@ -39,10 +39,27 @@
 				$this->Session->write('currentSpecialist', $specialist_person);
 				
 				$this->redirect(array('controller'=>'home', 'action' => 'institution', 1));
+
+			}elseif($user['role'] == 'C') {
+
+				$this->loadModel('Director');
+				
+				$director = $this->Director->find('first', array('conditions' => array('user_id' => $user['id']), 'recursive' => 0));
+				$this->Session->write('currentDirector', $director);
+
+				/// Inicialisar Sesion de Institución
+				$this->loadModel('Institution');
+				
+				$this->Session->write(
+					'currentInstitution', 
+					$this->Institution->find('first', array('conditions' => array('id' => $director['Worker']['institution_id']), 'recursive' => -1))
+				);
+				
+				$this->redirect(array('controller'=>'workers', 'action' => 'index'));
+
 			}else{
 				$this->Session->write('currentSpecialist', '');
-			}   
-			
+			}			
 			$this->redirect($this->Auth->redirect());
 		}
 	}

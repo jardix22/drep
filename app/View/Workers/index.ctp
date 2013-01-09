@@ -6,18 +6,15 @@
 	); 
 ?>
 
-<?php // print_r($workers); ?>
-
-<?php $this->Html->addCrumb($subTitle[$type]['s'], '/home/institution/'. $type); ?>
 <?php $this->Html->addCrumb($institution['Institution']['name'], null); ?>
 
 
 <div class="page-header">
 	<h2>
 		
-		<?php echo $subTitle[$type]['l']; ?>
+		<?php echo $subTitle[$institution['Institution']['level_id']]['l']; ?>
 		<div class='pull-right'>
-			<?php echo $this->Html->link("Evaluar", array('controller' => 'evaluations', 'action' => 'take', $type ), array('class' => 'btn')); ?>
+			<?php echo $this->Html->link("Evaluar", array('controller' => 'evaluations', 'action' => 'take', $testType ), array('class' => 'btn')); ?>
 		</div>
 	</h2>
 </div>

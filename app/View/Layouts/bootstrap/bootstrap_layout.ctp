@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>Sign in &middot; Twitter Bootstrap</title>
+		<title>DREP &middot; 2013</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="">
 		<meta name="author" content="">
@@ -35,14 +35,17 @@
 						<ul class="nav">
 
 							<?php if ($current_user['role'] == 'A'): ?>
-								<li><a href=<?php echo $this->Html->url('/');?>>Inicio</a></li>
 								<li><a href=<? echo $this->Html->url(array('controller' => 'tests', 'action' => 'index'))?>>Tests</a></li>
 								<li><a href=<? echo $this->Html->url(array('controller' => 'specialists', 'action' => 'index')); ?>>Especialistas</a></li>
+							<?php elseif ($current_user['role'] == 'B'): ?>
+								<li><?php echo $this->Html->link("Inicio", array('controller' => 'home','action' => 'institution', 1 ))?></li>
+								<!--<li><?php //echo $this->Html->link("Directores", array('controller' => 'home','action' => 'institution', 4 ))?></li>-->
+							<?php elseif ($current_user['role'] == 'C'): ?>
+								<li><a href=<?php echo $this->Html->url('/workers/');?>>Inicio</a></li>
 							<?php else: ;?>
-								<li><?php echo $this->Html->link("Inicial", array('controller' => 'home','action' => 'institution', 1 ))?></li>
+
 								<li><?php echo $this->Html->link("Primaria", array('controller' => 'home','action' => 'institution', 2 ))?></li>
 								<li><?php echo $this->Html->link("Secundaria", array('controller' => 'home','action' => 'institution', 3 ))?></li>
-								<!--<li><?php //echo $this->Html->link("Directores", array('controller' => 'home','action' => 'institution', 4 ))?></li>-->
 							<?php endif;?>
 							<!--<li class="divider-vertical"></li>-->
 						</ul>
@@ -74,18 +77,10 @@
 				<div class="breadcrumb cake-breadcrumb">
 					<?php echo $this->Html->getCrumbs("<span class='divider'>/</span>",null, null); ?>
 				</div>
-				<!--
-				<ul class="breadcrumb">
-					<li><a href="#">Inicio</a> <span class="divider">/</span></li>
-					<li><a href="#">Library</a> <span class="divider">/</span></li>
-					<li class="active">Data</li>
-				</ul>
-				-->
 			</div>
 		</div>
 
-
-		<div class="container main-container">
+		<div class="container ">
 			<div class="row">
 				<div class="span12">
 					<?php echo $this->fetch('content'); ?>
@@ -116,7 +111,7 @@
 		<?php echo $this->Html->script('/bootstrap/js/bootstrap-scrollspy'); ?>
 		<?php echo $this->Html->script('/bootstrap/js/bootstrap-tab'); ?>
 		<?php echo $this->Html->script('/bootstrap/js/bootstrap-tooltip'); ?>
-		<?php echo $this->Html->script('/bootstrap/js/bootstrap-popover'); ?>
+		<?php //echo $this->Html->script('/bootstrap/js/bootstrap-popover'); ?>
 		<?php echo $this->Html->script('/bootstrap/js/bootstrap-button'); ?>
 		<?php echo $this->Html->script('/bootstrap/js/bootstrap-collapse'); ?>
 		<?php // echo $this->Html->script('/bootstrap/js/bootstrap-carousel'); ?>

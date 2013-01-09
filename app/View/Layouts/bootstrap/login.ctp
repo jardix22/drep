@@ -9,7 +9,7 @@
 
     <!-- Le styles -->
 
-    <?php echo $this->Html->css('/bootstrap/css/bootstrap'); ?>
+    <?php echo $this->Html->css('/bootstrap/css/bootstrap.min'); ?>
     
     <style type="text/css">
       body {
@@ -44,7 +44,7 @@
 
     </style>
     
-    <?php echo $this->Html->css('/bootstrap/css/bootstrap-responsive'); ?>
+    <?php echo $this->Html->css('/bootstrap/css/bootstrap-responsive.min'); ?>
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>

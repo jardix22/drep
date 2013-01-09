@@ -3,12 +3,13 @@
 }
 
 .crumb-content{
-	border-bottom: 1px dashed #aaa;
-	background-color: #fefefe;
+	border-bottom: 1px solid #ddd;
 	z-index: 0;
+	margin-bottom: 10px;
+	background-color: #fefefe;
 }	 
 .main-container{
-
+	background-color: #fefefe;
 }
 
 .page-header{
