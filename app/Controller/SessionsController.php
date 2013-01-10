@@ -6,9 +6,7 @@
 		{
 			if ($this->request->is('post')) {
 				if ($this->Auth->login()) {
-		
 					$this->goingTo($this->Auth->User());
-
 				} else {
 					$this->Session->setFlash('Su usuario/contraseña son incorrectas');
 				}   
@@ -37,8 +35,13 @@
 				
 				$specialist_person = array('Specialist' => $specialist['Specialist'], 'Person' => $person['Person']);
 				$this->Session->write('currentSpecialist', $specialist_person);
+
+
+				$code = $specialist_person['Specialist']['code_id'];
+
+				$specialistType = array(1 => 1, 2 => 2);
 				
-				$this->redirect(array('controller'=>'home', 'action' => 'institution', 1));
+				$this->redirect(array('controller'=>'home', 'action' => 'institution', $specialistType[$code]));
 
 			}elseif($user['role'] == 'C') {
 

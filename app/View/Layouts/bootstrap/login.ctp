@@ -42,6 +42,11 @@
         padding: 7px 9px;
       }
 
+      .page-header, #login-button{
+        text-align: center;
+      }
+
+
     </style>
     
     <?php echo $this->Html->css('/bootstrap/css/bootstrap-responsive.min'); ?>

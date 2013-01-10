@@ -9,7 +9,7 @@ class AppController extends Controller {
 	public $helpers = array('Form', 'Html', 'BtForm');
 
 	public $components = array(
-		'Session',
+		'Session',		
 		'Auth' => array(
 			'loginAction' => array( 'controller' => 'sessions', 'action' => 'login' ),
 			'loginRedirect' => array('controller' => 'home', 'action' =>'institution', 1),

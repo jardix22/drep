@@ -1,7 +1,4 @@
 <?php
-	/**
-	* 
-	*/
 	class SpecialistsController extends AppController
 	{
 		public function beforeFilter()
@@ -43,12 +40,9 @@
 					$this->Session->setFlash("Estudiante Registrado");
 				} else {
 					$this->Session->setFlash("Error al Registrar Estudiante ");
-				}
-				
+				}	
 			}
-
 		}
-
 		public function edit($id = null)
 		{
 			if (!$id) {
