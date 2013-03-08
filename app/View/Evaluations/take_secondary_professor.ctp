@@ -11,7 +11,7 @@
 <?php $this->Html->addCrumb($institution['Institution']['name'], "/workers/index/"); ?>
 <?php $this->Html->addCrumb("EVALUACIÓN", null); ?>
 
-<?php echo $this->Form->create(array('action' => 'save', 'class' => 'form-horizontal')); ?>
+<?php echo $this->Form->create(array('action' => 'saveSecondaryProfessor', 'class' => 'form-horizontal')); ?>
 
 	<div class="page-header">
 		<h3><?php echo $test['Test']['title']?></h3>

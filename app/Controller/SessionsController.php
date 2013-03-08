@@ -12,8 +12,8 @@
 				}   
 			}else{
 				if ($this->Auth->login()) {
-					$this->Session->setMessage("Usted ya inicio su Sesion.");
-					$this->redirect(array('controller' => 'dandelion', 'action' => 'index'));
+					$this->Session->setFlash("Usted ya inicio su Sesion.");
+					//$this->redirect(array('controller' => 'sess', 'action' => 'index'));
 				} 
 			}
 			$this->layout = 'bootstrap/login';   
@@ -26,23 +26,33 @@
 
 		public function goingTo($user)
 		{
-			if ($user['role'] == 'B') {
+			$rootPath = array();
+
+			if ($user['role'] == 'A') {
+
+				$rootPath = array('controller' => 'ugels', 'action' => 'index');
+
+			}elseif ($user['role'] == 'B') {
 				$this->loadModel('Specialist');
 				$this->loadModel('Person');
 
-				$specialist = $this->Specialist->find('first', array('conditions' => array('user_id' => $user['id']), 'recursive' => -1));
+				$specialist = $this->Specialist->find('first', array('conditions' => array('user_id' => $user['id']), 'recursive' => 0));
 				$person = $this->Person->find('first', array('conditions' => array('id' => $specialist['Specialist']['person_id']), 'recursive' => -1));
 				
-				$specialist_person = array('Specialist' => $specialist['Specialist'], 'Person' => $person['Person']);
-				$this->Session->write('currentSpecialist', $specialist_person);
+				//$specialist_person = array('Specialist' => $specialist, 'Person' => $person['Person']);
+				$this->Session->write('currentSpecialist', $specialist);
 
 
-				$code = $specialist_person['Specialist']['code_id'];
+				if ($specialist['Code']['status'] == 1) {
+					$code = $specialist['Specialist']['code_id'];
+					$specialistType = array(1 => 1, 2 => 2, 3 => 3);
 
-				$specialistType = array(1 => 1, 2 => 2);
+					$rootPath = array('controller'=>'home', 'action' => 'institution', $specialistType[$code]);
+				} else {
+					
+					$rootPath = array('controller'=>'home', 'action' => 'secondary');
+				}
 				
-				$this->redirect(array('controller'=>'home', 'action' => 'institution', $specialistType[$code]));
-
 			}elseif($user['role'] == 'C') {
 
 				$this->loadModel('Director');
@@ -58,11 +68,14 @@
 					$this->Institution->find('first', array('conditions' => array('id' => $director['Worker']['institution_id']), 'recursive' => -1))
 				);
 				
-				$this->redirect(array('controller'=>'workers', 'action' => 'index'));
+				$rootPath = array('controller'=>'workers', 'action' => 'other');
 
 			}else{
-				$this->Session->write('currentSpecialist', '');
+				$this->Session->write('currentSpecialist', null);
+				
+				$rootPath  = $this->Auth->redirect();
 			}			
-			$this->redirect($this->Auth->redirect());
+			$this->Session->write('currentRootPath', $rootPath);
+			$this->redirect($rootPath);
 		}
 	}

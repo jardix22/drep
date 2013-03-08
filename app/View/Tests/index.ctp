@@ -1,4 +1,11 @@
-<?php ?>
+<?php $this->Html->addCrumb( 'TESTS', null); ?>
+
+<h3>
+	Tests
+	<div class="pull-right">
+		<?php echo $this->Html->link("Crear Test", array('action' => 'add'), array('class' => 'btn'))?>
+	</div>
+</h3>
 <table class='table'>
 	<thead>
 		<tr>
@@ -20,6 +27,3 @@
 	</tbody>
 </table>
 
-<p>
-	<?php echo $this->Html->link("Crear Test", array('action' => 'add'), array('class' => 'btn'))?>
-</p>

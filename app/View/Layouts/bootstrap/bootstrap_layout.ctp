@@ -13,6 +13,7 @@
 		<?php echo $this->Html->css('/bootstrap/css/bootstrap-validate'); ?>
 
 		<?php echo $this->Html->css('/myDrepTheme/css/master'); ?>
+		
 		<?php echo $this->Html->css('/bootstrap/css/core/jquery.dataTables'); ?>
 
 		<?php echo $this->Html->script('/bootstrap/js/core/jquery-1.8.3.min'); ?>
@@ -35,13 +36,16 @@
 						<ul class="nav">
 
 							<?php if ($current_user['role'] == 'A'): ?>
+								<li><a href=<? echo $this->Html->url(array('controller' => 'ugels', 'action' => 'index')); ?>>Ugels</a></li>
 								<li><a href=<? echo $this->Html->url(array('controller' => 'tests', 'action' => 'index'))?>>Tests</a></li>
-								<li><a href=<? echo $this->Html->url(array('controller' => 'specialists', 'action' => 'index')); ?>>Especialistas</a></li>
 							<?php elseif ($current_user['role'] == 'B'): ?>
-								<li><?php echo $this->Html->link("Inicio", array('controller' => 'home','action' => 'institution', 1 ))?></li>
+								<li><?php echo $this->Html->link("Inicio", '/')?></li>
 								<!--<li><?php //echo $this->Html->link("Directores", array('controller' => 'home','action' => 'institution', 4 ))?></li>-->
 							<?php elseif ($current_user['role'] == 'C'): ?>
-								<li><a href=<?php echo $this->Html->url('/workers/');?>>Inicio</a></li>
+								<li><a href=<?php echo $this->Html->url($this->Session->read('currentRootPath'));?>>Inicio</a></li>
+
+			
+
 							<?php else: ;?>
 
 								<li><?php echo $this->Html->link("Primaria", array('controller' => 'home','action' => 'institution', 2 ))?></li>

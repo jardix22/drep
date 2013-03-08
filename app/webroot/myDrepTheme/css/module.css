@@ -26,3 +26,26 @@
 	margin-bottom: 0px;
 	padding: 4px;
 }
+
+/*
+.table-question tbody tr td{
+	text-align: center;
+}
+.table-question tbody tr td:nth-child(1){
+	text-align: left;
+}
+
+*/
+tr.td-question td{
+
+}
+
+tr.td-subtitle td:nth-child(1){
+	font-weight: bold;	
+}
+
+tr.td-sub-question td:nth-child(1){
+	font-size: 0.98em;
+	padding-left: 30px;
+	font-style: italic;
+}

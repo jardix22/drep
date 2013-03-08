@@ -1,3 +1,6 @@
+<pre>
+	<?php print_r($this->Session->read('currentSpecialist'));?>
+</pre>
 <?php $subTitle = array( 
 	1 => array('l' => 'Instituciones de Nivel Inicial', 's' => 'INICIAL'), 
 	2 => array('l' => 'Instituciones de Nivel Primaria', 's' => 'PRIMARIA'), 
@@ -35,7 +38,7 @@
 				<td><?php echo $this->Html->link('Evaluar Director', array('controller' => 'directors', 'action' => 'evaluation', '?' => array('type' => $levelId, 'institution' => $institution['Institution']['id']))); ?></td>
 			-->
 
-				<td><?php echo $this->Html->link('Detalles', array('controller' => 'directors', 'action' => 'detail', $institution['Institution']['id'])); ?></td>
+				<td><?php echo $this->Html->link('Detalles', array('controller' => 'workers', 'action' => 'index', $institution['Institution']['id'])); ?></td>
 			
 			</tr>
 		<?php endforeach;?>
